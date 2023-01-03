@@ -18,15 +18,15 @@ class Linked_List:
 5.main
 '''))
         if choice == 1:
-            if self.head==None:
-              element = int(input('Enter the element you want to insert:'))
-              self.head = element
-              self.head=Node(element)
+            if self.head == None:
+                element = int(input('Enter the element you want to insert:'))
+                self.head = element
+                self.head = Node(element)
             else:
-                 element = int(input('Enter the element you want to insert:'))
-                 temp=self.head
-                 self.head=Node(element)
-                 self.head.next=temp
+                element = int(input('Enter the element you want to insert:'))
+                temp = self.head
+                self.head = Node(element)
+                self.head.next = temp
 
         elif choice == 2:
             if self.head == None:
@@ -57,84 +57,78 @@ class Linked_List:
                     temp.next = Node(element)
                     temp.next.next = temp2
         elif choice == 4:
-             if self.head==None:
-              print('list is empty')
-             else:
+            if self.head == None:
+                print('list is empty')
+            else:
 
-               temp = self.head
-               while temp != None:
-                print(temp.data)
-                temp = temp.next
-        elif choice ==5:
+                temp = self.head
+                while temp != None:
+                    print(temp.data)
+                    temp = temp.next
+        elif choice == 5:
             main()
         else:
             print('Enter valid statement:')
             exit(0)
+
     def delete(self):
         print('Enter the choie')
-        choic=int(input('''
- 1.deletion at first
- 2.deletion at end
- 3.deletion in between
- 4.print 
- 5.Main'''))
-        if choic==1:
-            if self.head==None:
+        choic = int(input('''
+1.deletion at first
+2.deletion at end
+3.deletion in between
+4.print 
+5.Main'''))
+        if choic == 1:
+            if self.head == None:
                 print('list is already Empty')
             else:
-                self.head=self.head.next
-        elif choic==2:
-            if self.head==None:
+                self.head = self.head.next
+        elif choic == 2:
+            if self.head == None:
                 print('List is already Emptyyy')
             else:
-                temp=self.head
-                temp2=self.head.next
-                while temp2.next!=None:
-                    temp2=temp.next
-                    temp=temp2
-                temp.next=None
-        elif choic==4:
-            if self.head==None:
-              print('list is empty')
+                temp = self.head
+                temp2 = self.head.next
+                while temp2.next != None:
+                    temp2 = temp.next
+                    temp = temp2
+                temp.next = None
+        elif choic == 4:
+            if self.head == None:
+                print('list is empty')
             else:
 
-               temp = self.head
-               while temp != None:
-                print(temp.data)
+                temp = self.head
+                while temp != None:
+                    print(temp.data)
                 temp = temp.next
-        elif choic==5:
+        elif choic == 5:
             main()
 
         else:
             print('invalid choice')
 
 
-        
-                
-
-   
-       
-mylist=Linked_List()
+mylist = Linked_List()
 
 
 def main():
     print('Enter your choice:')
-    choic= int(input(''' 
+    choic = int(input(''' 
 1.insert
 2.deletion
 0.exit
 '''))
-    while choic!=0:
-         if choic==1:
+    while choic != 0:
+        if choic == 1:
             mylist.createlist()
-         elif choic==2:
+        elif choic == 2:
             mylist.delete()
-         elif choic==0:
+        elif choic == 0:
             exit(0)
-         else:
+        else:
             print('invalid choice')
-            
 
-      
+
 main()
-    
